@@ -9,4 +9,14 @@ export const useStyles = makeStyles((theme) => ({
     height: '6em',
     paddingTop: '1rem',
   },
+  toolbarStyle: {
+    display: 'flex',
+    justifyContent: 'space-between',
+  },
+  logoButtonContainerStyle: {
+    padding: 0,
+    '&:hover': {
+      backgroundColor: 'transparent',
+    },
+  },
 }));
