@@ -17,5 +17,6 @@ export const useStyles = makeStyles((theme) => ({
     height: 'auto',
     width: '20rem',
     paddingRight: '10rem',
+    opacity: 0.75,
   },
 }));
