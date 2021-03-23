@@ -5,11 +5,9 @@ import { ThemeProvider } from '@material-ui/core/styles';
 
 function App() {
   return (
-    <div>
+    <div style={{ height: '100%' }}>
       <ThemeProvider theme={theme}>
-        <header>
-          <h1>HEADER</h1>
-        </header>
+        <header></header>
         <main>
           <Routes />
         </main>

@@ -3,16 +3,24 @@ import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 let theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#F80D52',
+      main: '#EDF2EF',
+      light: '#bdc1bf',
     },
     secondary: {
-      main: '#111634',
+      main: '#86A1D1',
+      dark: '#5d7092',
     },
   },
   colors: {
-    moderateGreen: '#5F9574',
-    lightGreen: '#BAD9B1',
-    lightLightGreen: '#F5EBCE',
+    moderateBlue: '#3A62C6',
+    lightPurple: '#786E9A',
+    darkBlue: '#31416A',
+  },
+  fonts: {
+    avenirItalicize: 'Avenir-Italicize',
+    avenirBold: 'Avenir-Bold',
+    avenirMedium: 'Avenir-Medium',
+    avenir: 'Avenir',
   },
 });
 
