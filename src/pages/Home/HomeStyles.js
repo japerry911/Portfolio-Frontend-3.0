@@ -36,6 +36,8 @@ export const useStyles = makeStyles((theme) => ({
     fontSize: '1.25rem',
     color: theme.palette.primary.main,
     transition: '350ms ease-in',
+    border: '.05rem solid black',
+    borderRadius: 10,
     '&:hover': {
       backgroundColor: theme.palette.primary.light,
       color: theme.palette.secondary.main,
