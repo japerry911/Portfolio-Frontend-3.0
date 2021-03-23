@@ -1,5 +1,5 @@
-import React from "react";
-import { useStyles } from "./BlogpostsStyles";
+import React from 'react';
+import { useStyles } from './BlogpostsStyles';
 
 const Blogposts = () => {
   const classes = useStyles();

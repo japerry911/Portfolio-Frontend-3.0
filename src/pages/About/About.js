@@ -1,5 +1,5 @@
-import React from "react";
-import { useStyles } from "./AboutStyles";
+import React from 'react';
+import { useStyles } from './AboutStyles';
 
 const About = () => {
   const classes = useStyles();
