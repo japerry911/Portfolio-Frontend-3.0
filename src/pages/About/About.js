@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
-import { aboutMeContentArray } from './TextContent';
+import { aboutMeContentArray, skillSetArray } from './TextContent';
 import Grid from '@material-ui/core/Grid';
 import Panel from '../../components/Panel/Panel';
+import ExpCard from '../../components/ExpCard/ExpCard';
 import { useStyles } from './AboutStyles';
 
 const About = () => {
@@ -17,7 +18,10 @@ const About = () => {
         alignItems='center'
       >
         <Grid container item justify='space-between' alignItems='center'>
-          <Grid item style={{ width: '50%', padding: '3rem' }}>
+          <Grid
+            item
+            style={{ width: '50%', padding: '3rem', marginTop: '10rem' }}
+          >
             <Fragment>
               {aboutMeContentArray.map((contentObject, index) => (
                 <Panel
@@ -35,6 +39,25 @@ const About = () => {
               className={classes.profilePictureStyle}
             />
           </Grid>
+        </Grid>
+        <Grid
+          container
+          item
+          style={{
+            display: 'center',
+            justifyContent: 'space-between',
+            padding: '0 3rem',
+          }}
+        >
+          {skillSetArray.map((skillSetObject, index) => (
+            <ExpCard
+              key={`${skillSetObject.name}-${index}`}
+              expName={skillSetObject.name}
+              expDescription={skillSetObject.description}
+              imageUrl={skillSetObject.imageUrl}
+              widePhoto={skillSetObject.widePhoto}
+            />
+          ))}
         </Grid>
       </Grid>
     </div>

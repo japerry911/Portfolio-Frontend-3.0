@@ -25,3 +25,29 @@ export const aboutMeContentArray = [
       'anticipated graduation date of Summer 2022.',
   },
 ];
+
+export const skillSetArray = [
+  {
+    name: 'Haskell',
+    description:
+      'Programmed Code Wars Challenges in Haskell, as well as a Ni-Compiler',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/1280px-Haskell-Logo.svg.png',
+    widePhoto: false,
+  },
+  {
+    name: 'Python',
+    description:
+      'Program ETL processes in Python at work, program API integrations in Python, Discrete Structures and Algorithms in Python',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/5848152fcef1014c0b5e4967.png',
+    widePhoto: false,
+  },
+  {
+    name: 'Express JS',
+    description: 'This website is programmed with Express JS in mind',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/Expressjs+(1).png',
+    widePhoto: true,
+  },
+];
