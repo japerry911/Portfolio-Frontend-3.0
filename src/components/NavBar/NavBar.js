@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import NavBarTabs from '../NavBarTabs/NavBarTabs';
@@ -12,7 +12,7 @@ const NavBar = ({ value, setValue }) => {
   const handleTabChange = (_, newValue) => setValue(newValue);
 
   return (
-    <div>
+    <Fragment>
       <AppBar
         position='static'
         position='absolute'
@@ -35,7 +35,7 @@ const NavBar = ({ value, setValue }) => {
           <NavBarTabs value={value} handleTabChange={handleTabChange} />
         </Toolbar>
       </AppBar>
-    </div>
+    </Fragment>
   );
 };
 
