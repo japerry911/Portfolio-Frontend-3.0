@@ -8,6 +8,11 @@ export const useStyles = makeStyles((theme) => ({
     margin: '1rem',
     height: '30rem',
     width: '25%',
+    opacity: 0.75,
+    transition: '350ms ease-in',
+    '&:hover': {
+      opacity: 1,
+    },
   },
   mainContentAreaStyle: {
     height: '100%',

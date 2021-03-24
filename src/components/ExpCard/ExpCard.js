@@ -1,13 +1,12 @@
 import React, { Fragment } from 'react';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import CardMedia from '@material-ui/core/CardMedia';
 import { useStyles } from './ExpCardStyles';
 
-const ExpCard = ({ imageUrl, expName, expDescription, widePhoto }) => {
-  const classes = useStyles({ widePhoto });
+const ExpCard = ({ imageUrl, expName, expDescription }) => {
+  const classes = useStyles();
 
   return (
     <Fragment>

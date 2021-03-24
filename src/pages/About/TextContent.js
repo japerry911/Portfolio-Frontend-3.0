@@ -33,7 +33,6 @@ export const skillSetArray = [
       'Programmed Code Wars Challenges in Haskell, as well as a Ni-Compiler',
     imageUrl:
       'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/1280px-Haskell-Logo.svg.png',
-    widePhoto: false,
   },
   {
     name: 'Python',
@@ -41,13 +40,116 @@ export const skillSetArray = [
       'Program ETL processes in Python at work, program API integrations in Python, Discrete Structures and Algorithms in Python',
     imageUrl:
       'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/5848152fcef1014c0b5e4967.png',
-    widePhoto: false,
   },
   {
     name: 'Express JS',
-    description: 'This website is programmed with Express JS in mind',
+    description: "This website's backend is programmed with Express JS",
     imageUrl:
       'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/Expressjs+(1).png',
-    widePhoto: true,
+  },
+  {
+    name: 'JavaScript',
+    description: 'ES5 and ES6 experience, websites and automation scripts',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/JavaScript-Logo.png',
+  },
+  {
+    name: 'React',
+    description: 'React and React Native Experience building Web/Mobile Apps',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/1280px-React-icon.svg.png',
+  },
+  {
+    name: 'GoLang',
+    description:
+      'Automation experience with GoLang, as well as Backend API building experience',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/1200px-Go_Logo_Blue.svg.png',
+  },
+  {
+    name: 'Ruby on Rails',
+    description: 'Backend API building experience',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/Ruby_On_Rails_Logo.svg.png',
+  },
+  {
+    name: 'Vue JS',
+    description: 'Intermediate frontend development with Vue JS',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/58482acecef1014c0b5e4a1e.png',
+  },
+  {
+    name: 'SASS',
+    description: 'Intermediate frontend styling with SASS',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/1280px-Sass_Logo_Color.svg.png',
+  },
+  {
+    name: 'Google Material-UI',
+    description:
+      'Frontend development and styling with Google Material-UI, including this website',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/logo.png',
+  },
+  {
+    name: 'PostgreSQL',
+    description:
+      'Utilized as database in Full-Stack Web App development, and utilized in prior work experiences',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/584815fdcef1014c0b5e497a.png',
+  },
+  {
+    name: 'C++',
+    description: 'Utilized during school at the University of Denver',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/306px-ISO_C%2B%2B_Logo.svg.png',
+  },
+  {
+    name: 'C',
+    description: 'Utilized during school at the University of Denver',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/c-programming-569564.png',
+  },
+  {
+    name: 'Elixir',
+    description:
+      "Learned on the side and utilized in a developed website's backend API",
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/META-INF_pluginIcon.png',
+  },
+  {
+    name: 'Phoenix Framework',
+    description:
+      "Learned alongside Elixir and utilized in developed website's backend API",
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/phoenix-bcd92d6eab83c07e921cb06c8121321a.png',
+  },
+  {
+    name: 'Google Apps Scripts',
+    description:
+      'Utilized in past freelance experience and during prior work experiences',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/kisspng-google-apps-script-scripting-language-google-docs-5b1184dae3d318.1328276315278747789332.png',
+  },
+  {
+    name: 'Amazon Web Services',
+    description:
+      'Utilized at work and in website development, have utilized ECS, ECR, S3, CloudWatch, EC2, and more',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/1024px-Amazon_Web_Services_Logo.svg.png',
+  },
+  {
+    name: 'Google Cloud Platform',
+    description:
+      'Utilized BigQuery, Cloud Storage, Compute Engine, Stackdrive Logging, and more during prior work experiences',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/gcp-logo-cloud.png',
+  },
+  {
+    name: 'Heroku',
+    description:
+      'Deployed Full-Stack Web Apps through Heroku, including this web app',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/heroku-logo-solid-gradient.png',
   },
 ];

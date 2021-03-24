@@ -3,6 +3,7 @@ import { aboutMeContentArray, skillSetArray } from './TextContent';
 import Grid from '@material-ui/core/Grid';
 import Panel from '../../components/Panel/Panel';
 import ExpCard from '../../components/ExpCard/ExpCard';
+import Typography from '@material-ui/core/Typography';
 import { useStyles } from './AboutStyles';
 
 const About = () => {
@@ -17,11 +18,14 @@ const About = () => {
         justify='center'
         alignItems='center'
       >
-        <Grid container item justify='space-between' alignItems='center'>
-          <Grid
-            item
-            style={{ width: '50%', padding: '3rem', marginTop: '10rem' }}
-          >
+        <Grid
+          container
+          item
+          justify='space-between'
+          alignItems='center'
+          className={classes.aboutGridContainerStyle}
+        >
+          <Grid item style={{ width: '50%', padding: '3rem' }}>
             <Fragment>
               {aboutMeContentArray.map((contentObject, index) => (
                 <Panel
@@ -40,14 +44,16 @@ const About = () => {
             />
           </Grid>
         </Grid>
+        <Grid item style={{ marginTop: '10rem' }}>
+          <Typography variant='h1' className={classes.h1Style}>
+            EXPERIENCE
+          </Typography>
+        </Grid>
         <Grid
           container
           item
-          style={{
-            display: 'center',
-            justifyContent: 'space-between',
-            padding: '0 3rem',
-          }}
+          justify='space-evenly'
+          style={{ marginTop: '5rem' }}
         >
           {skillSetArray.map((skillSetObject, index) => (
             <ExpCard
@@ -55,7 +61,6 @@ const About = () => {
               expName={skillSetObject.name}
               expDescription={skillSetObject.description}
               imageUrl={skillSetObject.imageUrl}
-              widePhoto={skillSetObject.widePhoto}
             />
           ))}
         </Grid>
