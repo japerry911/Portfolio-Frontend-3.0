@@ -13,7 +13,6 @@ export const useStyles = makeStyles((theme) => ({
   mainDivStyle: {
     flexGrow: 1,
     minHeight: '100vh',
-    backgroundColor: theme.palette.secondary.dark,
   },
   aboutGridContainerStyle: {
     minHeight: '60rem',

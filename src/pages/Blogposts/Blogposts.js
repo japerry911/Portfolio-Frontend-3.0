@@ -1,12 +1,13 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
 import { useStyles } from './BlogpostsStyles';
 
 const Blogposts = () => {
   const classes = useStyles();
 
   return (
-    <div>
-      <h1>BLOGPOSTS</h1>
+    <div className={classes.mainDivStyle}>
+      <Grid container className={classes.mainGridContainerStyle}></Grid>
     </div>
   );
 };
