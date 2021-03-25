@@ -9,6 +9,7 @@ export const useStyles = makeStyles((theme) => ({
     backgroundPosition: '0 100%',
     minHeight: '100vh',
     backgroundAttachment: 'fixed',
+    paddingTop: '10rem',
   },
   mainDivStyle: {
     flexGrow: 1,
