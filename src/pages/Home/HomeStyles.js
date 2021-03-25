@@ -31,7 +31,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   buttonStyle: {
     fontFamily: 'Avenir-Bold',
-    backgroundColor: 'rgba(255,255,255,0)',
+    backgroundColor: 'rgba(255,255,255,0.15)',
     padding: '2.15rem 5rem',
     fontSize: '1.25rem',
     color: theme.palette.primary.main,
