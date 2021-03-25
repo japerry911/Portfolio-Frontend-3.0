@@ -1,12 +1,17 @@
 import React from 'react';
+import Grid from '@material-ui/core/Grid';
 import { useStyles } from './ProjectsStyles';
 
 const Projects = () => {
   const classes = useStyles();
 
   return (
-    <div>
-      <h1>PROJECTS</h1>
+    <div className={classes.mainDivStyle}>
+      <Grid
+        container
+        className={classes.mainGridContainerStyle}
+        justify='center'
+      ></Grid>
     </div>
   );
 };
