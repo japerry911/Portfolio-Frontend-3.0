@@ -20,10 +20,19 @@ const ExpCard = ({ imageUrl, expName, expDescription }) => {
             height='50%'
           />
           <CardContent>
-            <Typography gutterBottom variant='h5' component='h2'>
+            <Typography
+              gutterBottom
+              variant='h5'
+              component='h2'
+              className={classes.fontStyle}
+            >
               {expName}
             </Typography>
-            <Typography variant='body2' component='p'>
+            <Typography
+              variant='body2'
+              component='p'
+              className={classes.fontStyle}
+            >
               {expDescription}
             </Typography>
           </CardContent>

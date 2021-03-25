@@ -1,12 +1,19 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
 export const useStyles = makeStyles((theme) => ({
+  cardActionAreaStyle: {
+    height: '100%',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'space-around',
+  },
   mediaStyle: {
     objectFit: 'contain',
+    paddingTop: '3rem',
   },
   cardStyle: {
-    margin: '1rem',
-    height: '30rem',
+    margin: '3rem',
+    height: '25rem',
     width: '25%',
     opacity: 0.75,
     transition: '350ms ease-in',
@@ -14,14 +21,8 @@ export const useStyles = makeStyles((theme) => ({
       opacity: 1,
     },
   },
-  mainContentAreaStyle: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   fontStyle: {
     fontFamily: theme.fonts.avenir,
+    textAlign: 'center',
   },
 }));
