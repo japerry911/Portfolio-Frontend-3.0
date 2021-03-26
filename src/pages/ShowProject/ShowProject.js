@@ -32,16 +32,26 @@ const ShowProject = () => {
       {isLoading ? (
         <h1>LOADING</h1>
       ) : (
-        <Grid
-          container
-          item
-          className={classes.mainGridContainerStyle}
-          justify='center'
-          direction='column'
-          alignItems='center'
-        >
-          <Paper className={classes.mainPaperStyle}></Paper>
-        </Grid>
+        <Paper elevation={3} className={classes.mainPaperStyle}>
+          <Grid
+            container
+            item
+            justify='center'
+            alignItems='center'
+            direction='column'
+            style={{ height: '100%' }}
+          >
+            <Grid item>
+              <Typography variant='h3' className={classes.titleStyle}>
+                {project.title}
+              </Typography>
+            </Grid>
+            <Grid item align='center'>
+              <img src={project.imgUrl} className={classes.imgStyle} />
+            </Grid>
+            <Grid item></Grid>
+          </Grid>
+        </Paper>
       )}
     </div>
   );

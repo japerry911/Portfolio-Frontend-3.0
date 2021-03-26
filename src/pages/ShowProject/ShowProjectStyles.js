@@ -1,11 +1,6 @@
 import makeStyles from '@material-ui/core/styles/makeStyles';
 
 export const useStyles = makeStyles((theme) => ({
-  mainGridContainerStyle: {
-    minHeight: '100vh',
-    paddingTop: '5rem',
-    backgroundColor: 'transparent',
-  },
   mainDivStyle: {
     flexGrow: 1,
     minHeight: '100vh',
@@ -15,9 +10,22 @@ export const useStyles = makeStyles((theme) => ({
     backgroundSize: 'cover',
     backgroundPosition: '0 100%',
     backgroundAttachment: 'fixed',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   mainPaperStyle: {
     width: '65rem',
     height: '45rem',
+    backgroundColor: theme.palette.secondary.dark,
+    opacity: 0.9,
+  },
+  titleStyle: {
+    fontFamily: theme.fonts.avenirBold,
+    color: theme.palette.primary.main,
+  },
+  imgStyle: {
+    objectFit: 'contained',
+    width: '50%',
   },
 }));
