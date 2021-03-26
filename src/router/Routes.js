@@ -6,6 +6,7 @@ import Blogposts from '../pages/Blogposts/Blogposts';
 import Contact from '../pages/Contact/Contact';
 import Home from '../pages/Home/Home';
 import Projects from '../pages/Projects/Projects';
+import ShowProject from '../pages/ShowProject/ShowProject';
 
 export default () => {
   return (
@@ -16,6 +17,7 @@ export default () => {
       <Route exact path='/blogposts' component={Blogposts} />
       <Route exact path='/contact' component={Contact} />
       <Route exact path='/projects' component={Projects} />
+      <Route exact path='/projects/:id' component={ShowProject} />
     </Fragment>
   );
 };
