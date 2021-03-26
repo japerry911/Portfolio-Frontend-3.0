@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import expressServer from '../../api/expressServer';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import ShowProjectCard from '../../components/ShowProjectCard/ShowProjectCard';
+import Paper from '@material-ui/core/Paper';
 import { useStyles } from './ShowProjectStyles';
 
 const ShowProject = () => {
@@ -28,18 +28,21 @@ const ShowProject = () => {
   const params = useParams();
 
   return (
-    <div>
-      <Grid
-        container
-        className={classes.mainGridContainerStyle}
-        justify='center'
-        direction='column'
-        alignItems='center'
-      >
-        <Grid item>
-          <ShowProjectCard projectObject={project} />
+    <div className={classes.mainDivStyle}>
+      {isLoading ? (
+        <h1>LOADING</h1>
+      ) : (
+        <Grid
+          container
+          item
+          className={classes.mainGridContainerStyle}
+          justify='center'
+          direction='column'
+          alignItems='center'
+        >
+          <Paper className={classes.mainPaperStyle}></Paper>
         </Grid>
-      </Grid>
+      )}
     </div>
   );
 };
