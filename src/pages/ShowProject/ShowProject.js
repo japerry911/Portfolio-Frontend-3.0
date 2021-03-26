@@ -5,6 +5,10 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Paper from '@material-ui/core/Paper';
 import ChipArray from '../../components/ChipArray/ChipArray';
+import YouTubeIcon from '@material-ui/icons/YouTube';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import LinkIcon from '@material-ui/icons/Link';
+import IconButton from '@material-ui/core/IconButton';
 import { useStyles } from './ShowProjectStyles';
 
 const ShowProject = () => {
@@ -45,7 +49,7 @@ const ShowProject = () => {
             container
             style={{ minHeight: '40rem' }}
             direction='column'
-            justify='space-evenly'
+            justify='space-between'
             alignItems='center'
           >
             <Grid item>
@@ -62,6 +66,38 @@ const ShowProject = () => {
             </Grid>
             <Grid item align='center'>
               <ChipArray chips={featuresArray} />
+            </Grid>
+            <Grid container item justify='space-evenly'>
+              <Grid item>
+                <IconButton
+                  component='a'
+                  href={project.appLink}
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  <LinkIcon style={{ fontSize: '5rem' }} color='primary' />
+                </IconButton>
+              </Grid>
+              <Grid item>
+                <IconButton
+                  component='a'
+                  href={project.youtubeLink}
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  <YouTubeIcon style={{ fontSize: '5rem' }} color='primary' />
+                </IconButton>
+              </Grid>
+              <Grid item>
+                <IconButton
+                  component='a'
+                  href={project.githubLink}
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  <GitHubIcon style={{ fontSize: '5rem' }} color='primary' />
+                </IconButton>
+              </Grid>
             </Grid>
           </Grid>
         </Paper>

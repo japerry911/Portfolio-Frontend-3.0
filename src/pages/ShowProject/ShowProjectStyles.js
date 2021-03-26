@@ -16,6 +16,7 @@ export const useStyles = makeStyles((theme) => ({
   },
   mainPaperStyle: {
     padding: '3rem 0',
+    margin: '10rem 0',
     width: '65rem',
     minHeight: '40rem',
     backgroundColor: 'rgba(93,112,146,.50)',
@@ -27,5 +28,7 @@ export const useStyles = makeStyles((theme) => ({
   imgStyle: {
     objectFit: 'contained',
     width: '50%',
+    padding: '5rem 0',
+    opacity: 0.85,
   },
 }));
