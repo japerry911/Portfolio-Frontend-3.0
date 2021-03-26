@@ -15,10 +15,10 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   mainPaperStyle: {
+    padding: '3rem 0',
     width: '65rem',
-    height: '45rem',
-    backgroundColor: theme.palette.secondary.dark,
-    opacity: 0.9,
+    minHeight: '40rem',
+    backgroundColor: 'rgba(93,112,146,.50)',
   },
   titleStyle: {
     fontFamily: theme.fonts.avenirBold,
