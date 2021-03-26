@@ -15,8 +15,4 @@ export const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
     minHeight: '100vh',
   },
-  headerFontStyle: {
-    fontFamily: theme.fonts.avenirBold,
-    color: theme.palette.primary.main,
-  },
 }));

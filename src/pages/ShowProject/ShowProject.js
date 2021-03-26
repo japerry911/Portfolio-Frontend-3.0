@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import expressServer from '../../api/expressServer';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
+import ShowProjectCard from '../../components/ShowProjectCard/ShowProjectCard';
 import { useStyles } from './ShowProjectStyles';
 
 const ShowProject = () => {
@@ -36,9 +37,7 @@ const ShowProject = () => {
         alignItems='center'
       >
         <Grid item>
-          <Typography variant='h1' className={classes.headerFontStyle}>
-            {project.title}
-          </Typography>
+          <ShowProjectCard projectObject={project} />
         </Grid>
       </Grid>
     </div>
