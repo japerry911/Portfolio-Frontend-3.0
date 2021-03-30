@@ -18,9 +18,9 @@ const Home = () => {
         justify='center'
         direction='column'
       >
-        <Grid item>
+        <Grid item align='center' style={{ width: '100%' }}>
           <Paper className={classes.paperStyle}>
-            <Typography className={classes.introTextStyle}>
+            <Typography className={classes.introTextStyle} variant='h4'>
               Greetings<span className={classes.spanStyle}>,</span> I'm Jack
               Perry<span className={classes.spanStyle}>.</span> <br /> I
               <span className={classes.spanStyle}>'</span>m a Full Stack
@@ -30,7 +30,7 @@ const Home = () => {
             </Typography>
           </Paper>
         </Grid>
-        <Grid item className={classes.btnGridItemStyle}>
+        <Grid item className={classes.btnGridItemStyle} align='center'>
           <Button
             className={classes.buttonStyle}
             component={Link}

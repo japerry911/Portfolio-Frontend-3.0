@@ -12,6 +12,7 @@ import ToastBar from '../../components/ToastBar/ToastBar';
 import expressServer from '../../api/expressServer';
 import LoadingBackdrop from '../../components/LoadingBackdrop/LoadingBackdrop';
 import { sleep } from '../../misc';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useStyles } from './ContactStyles';
 
 const INITIAL_STATE = {
@@ -28,6 +29,8 @@ const emailRegexp = new RegExp(
 const Contact = () => {
   const classes = useStyles();
   const theme = useTheme();
+
+  const matchesSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [isLoading, setIsLoading] = useState(false);
   const [validationStatus, setValidationStatus] = useState(false);
@@ -149,7 +152,7 @@ const Contact = () => {
                   id='message'
                   onChange={setField}
                   value={fields.message}
-                  style={{ width: '55%' }}
+                  style={{ width: matchesSM ? '85%' : '55%' }}
                 />
                 <Button
                   variant='contained'

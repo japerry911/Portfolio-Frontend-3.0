@@ -17,9 +17,12 @@ export const useStyles = makeStyles((theme) => ({
   mainPaperStyle: {
     padding: '3rem 0',
     margin: '10rem 0',
-    width: '65rem',
+    width: '75%',
     minHeight: '40rem',
     backgroundColor: 'rgba(93,112,146,.50)',
+    [theme.breakpoints.down('sm')]: {
+      width: '90%',
+    },
   },
   titleStyle: {
     fontFamily: theme.fonts.avenirBold,

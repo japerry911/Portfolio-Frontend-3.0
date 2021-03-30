@@ -13,11 +13,14 @@ import Divider from '@material-ui/core/Divider';
 import useTheme from '@material-ui/core/styles/useTheme';
 import LoadingBackdrop from '../../components/LoadingBackdrop/LoadingBackdrop';
 import { sleep } from '../../misc';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import { useStyles } from './ShowProjectStyles';
 
 const ShowProject = () => {
   const classes = useStyles();
   const theme = useTheme();
+
+  const matchesXS = useMediaQuery(theme.breakpoints.down('xs'));
 
   const [isLoading, setIsLoading] = useState(true);
   const [project, setProject] = useState({});
@@ -60,7 +63,7 @@ const ShowProject = () => {
           >
             <Grid item>
               <Typography
-                variant='h3'
+                variant={matchesXS ? 'h4' : 'h3'}
                 className={classes.titleStyle}
                 align='center'
               >
@@ -85,7 +88,13 @@ const ShowProject = () => {
                 width: '80%',
               }}
             />
-            <Grid container item justify='space-evenly'>
+            <Grid
+              container
+              item
+              justify='space-evenly'
+              direction={matchesXS ? 'column' : 'row'}
+              alignItems='center'
+            >
               {project.appLink === undefined ? null : (
                 <Grid item>
                   <IconButton
@@ -118,7 +127,7 @@ const ShowProject = () => {
                     rel='noopener noreferrer'
                     target='_blank'
                   >
-                    <GitHubIcon style={{ fontSize: '5rem' }} color='primary' />
+                    <GitHubIcon style={{ fontSize: '4rem' }} color='primary' />
                   </IconButton>
                 </Grid>
               )}
