@@ -20,6 +20,10 @@ export const useStyles = makeStyles((theme) => ({
     '&:hover': {
       opacity: 1,
     },
+    [theme.breakpoints.down('md')]: {
+      width: '85%',
+      margin: '1rem',
+    },
   },
   fontStyle: {
     fontFamily: theme.fonts.avenir,
