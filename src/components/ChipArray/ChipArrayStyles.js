@@ -12,7 +12,6 @@ export const useStyles = makeStyles((theme) => ({
     width: '90%',
   },
   chipStyle: {
-    margin: theme.spacing(0.5),
     width: '10rem',
     margin: '1.25rem 1rem',
     opacity: 0.95,

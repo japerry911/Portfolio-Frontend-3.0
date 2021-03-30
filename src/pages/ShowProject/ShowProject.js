@@ -11,6 +11,8 @@ import LinkIcon from '@material-ui/icons/Link';
 import IconButton from '@material-ui/core/IconButton';
 import Divider from '@material-ui/core/Divider';
 import useTheme from '@material-ui/core/styles/useTheme';
+import LoadingBackdrop from '../../components/LoadingBackdrop/LoadingBackdrop';
+import { sleep } from '../../misc';
 import { useStyles } from './ShowProjectStyles';
 
 const ShowProject = () => {
@@ -29,6 +31,8 @@ const ShowProject = () => {
     const fetchData = async () => {
       const projectResult = await expressServer.get(`/projects/${params.id}`);
 
+      await sleep(1000);
+
       const tmpFeaturesArray = projectResult.data.features.map((feature) => ({
         text: feature,
       }));
@@ -39,12 +43,12 @@ const ShowProject = () => {
     };
 
     fetchData();
-  }, []);
+  }, [params.id]);
 
   return (
     <div className={classes.mainDivStyle}>
       {isLoading ? (
-        <h1>LOADING</h1>
+        <LoadingBackdrop />
       ) : (
         <Paper elevation={3} className={classes.mainPaperStyle}>
           <Grid
@@ -64,7 +68,11 @@ const ShowProject = () => {
               </Typography>
             </Grid>
             <Grid item align='center'>
-              <img src={project.imgUrl} className={classes.imgStyle} />
+              <img
+                src={project.imgUrl}
+                className={classes.imgStyle}
+                alt={`${project.title} logo`}
+              />
             </Grid>
             <Grid item align='center'>
               <ChipArray chips={featuresArray} />

@@ -1,7 +1,7 @@
 export const routesArray = [
-  { name: 'Home', link: '/' },
-  { name: 'About', link: '/about' },
-  { name: 'Blogposts', link: '/blogposts' },
-  { name: 'Projects', link: '/projects' },
-  { name: 'Contact', link: '/contact' },
+  { name: 'Home', link: '/', index: 0 },
+  { name: 'About', link: '/about', index: 1 },
+  { name: 'Blogposts', link: '/blogposts', index: 2 },
+  { name: 'Projects', link: '/projects', index: 3 },
+  { name: 'Contact', link: '/contact', index: 4 },
 ];

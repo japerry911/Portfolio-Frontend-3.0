@@ -2,6 +2,8 @@ import React, { useState, useEffect, Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
 import expressServer from '../../api/expressServer';
 import ProjectCard from '../../components/ProjectCard/ProjectCard';
+import LoadingBackdrop from '../../components/LoadingBackdrop/LoadingBackdrop';
+import { sleep } from '../../misc';
 import { useStyles } from './ProjectsStyles';
 
 const Projects = () => {
@@ -16,6 +18,8 @@ const Projects = () => {
     const fetchData = async () => {
       const projectsResults = await expressServer.get('/projects');
 
+      await sleep(1000);
+
       setProjects(projectsResults.data);
       setIsLoading(false);
     };
@@ -25,17 +29,21 @@ const Projects = () => {
 
   return (
     <div className={classes.mainDivStyle}>
-      <Grid
-        container
-        className={classes.mainGridContainerStyle}
-        justify='center'
-      >
-        {projects.map((projectObject, index) => (
-          <Fragment key={`${projectObject.title}-${index}`}>
-            <ProjectCard projectObject={projectObject} />
-          </Fragment>
-        ))}
-      </Grid>
+      {isLoading ? (
+        <LoadingBackdrop />
+      ) : (
+        <Grid
+          container
+          className={classes.mainGridContainerStyle}
+          justify='center'
+        >
+          {projects.map((projectObject, index) => (
+            <Fragment key={`${projectObject.title}-${index}`}>
+              <ProjectCard projectObject={projectObject} />
+            </Fragment>
+          ))}
+        </Grid>
+      )}
     </div>
   );
 };

@@ -6,15 +6,12 @@ import Button from '@material-ui/core/Button';
 import { Link } from 'react-router-dom';
 import { useStyles } from './NavBarStyles';
 
-const NavBar = ({ value, setValue }) => {
+const NavBar = ({ value }) => {
   const classes = useStyles();
-
-  const handleTabChange = (_, newValue) => setValue(newValue);
 
   return (
     <Fragment>
       <AppBar
-        position='static'
         position='absolute'
         color='transparent'
         className={classes.appBarStyle}
@@ -32,7 +29,7 @@ const NavBar = ({ value, setValue }) => {
               src='https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/Logos/white_logo_transparent_background.png'
             />
           </Button>
-          <NavBarTabs value={value} handleTabChange={handleTabChange} />
+          <NavBarTabs value={value} />
         </Toolbar>
       </AppBar>
     </Fragment>

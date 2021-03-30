@@ -14,15 +14,17 @@ export const aboutMeContentArray = [
       ' digital marketing agency. In this role, I was in charge of building tools for account managers while also developing the company’s' +
       ' in-house reporting tool: Compass. I was quickly promoted to Developer at Metric Theory, where I created ETL tools for several APIs' +
       ' including Google DoubleClick, Call Rail, Apple Search Ads and more. I was also in charge of developing a LinkedIn Ads Experiments UI,' +
-      ' which utilized React JS and Nodejs Express.',
+      ' which utilized React JS and Express JS.',
   },
   {
     name: '2020 - Present',
     content:
       'In February 2020, I decided to pursue a certificate in software engineering at Flatiron School to further build my web development skills.' +
       ' This experience enhanced my expertise in JavaScript, React JS, HTML, CSS, React Native and Ruby on Rails. In May 2020, I graduated from' +
-      ' the Flatiron School. In June 2020, I decided to enroll in the Computer Science Masters Program at the University of Denver. I have an ' +
-      'anticipated graduation date of Summer 2022.',
+      ' the Flatiron School. Following my graduation from the Flatiron School, I was given the opportunity to work for Digible, Inc as an ETL' +
+      ' Automation Developer. In this role, I have worked with Python, AWS (ECS, ECR, S3, CloudWatch, and more), NodeJS, and more. Specifically, I ' +
+      'work to connect APIs and external data sources to our OLTP and OLAP. A recent notable accomplishment, was creating an integration with Google ' +
+      'Analytics API while utilizing SQL, Python, and AWS (ECS, ECR, S3).\n Currently, I still work with Digible, Inc. and continue to develop integrations.',
   },
 ];
 
@@ -151,5 +153,11 @@ export const skillSetArray = [
       'Deployed Full-Stack Web Apps through Heroku, including this web app',
     imageUrl:
       'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/heroku-logo-solid-gradient.png',
+  },
+  {
+    name: 'MongoDB',
+    description: 'Utilized in this Portfolio website as a Database',
+    imageUrl:
+      'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/58481021cef1014c0b5e494b.png',
   },
 ];
