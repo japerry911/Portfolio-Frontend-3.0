@@ -10,6 +10,8 @@ import Icon from '@material-ui/core/Icon';
 import { useFormFields } from '../../hooks/customHooks';
 import ToastBar from '../../components/ToastBar/ToastBar';
 import expressServer from '../../api/expressServer';
+import LoadingBackdrop from '../../components/LoadingBackdrop/LoadingBackdrop';
+import { sleep } from '../../misc';
 import { useStyles } from './ContactStyles';
 
 const INITIAL_STATE = {
@@ -66,6 +68,8 @@ const Contact = () => {
       sendObject
     );
 
+    await sleep(1500);
+
     if (response.status !== 200) {
       setToastMessage('Message send failure, try again');
       setType('error');
@@ -82,7 +86,9 @@ const Contact = () => {
 
   return (
     <div className={classes.mainDivStyle}>
-      {isLoading ? null : (
+      {isLoading ? (
+        <LoadingBackdrop />
+      ) : (
         <Paper className={classes.mainPaperStyle}>
           <Grid
             container

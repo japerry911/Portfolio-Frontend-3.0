@@ -2,6 +2,8 @@ import React, { useState, useEffect, Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
 import expressServer from '../../api/expressServer';
 import BlogpostCard from '../../components/BlogpostCard/BlogpostCard';
+import LoadingBackdrop from '../../components/LoadingBackdrop/LoadingBackdrop';
+import { sleep } from '../../misc';
 import { useStyles } from './BlogpostsStyles';
 
 const Blogposts = () => {
@@ -16,6 +18,8 @@ const Blogposts = () => {
     const fetchData = async () => {
       const blogpostsResult = await expressServer.get('/blogposts');
 
+      await sleep(1500);
+
       setBlogposts(blogpostsResult.data);
       setIsLoading(false);
     };
@@ -25,7 +29,9 @@ const Blogposts = () => {
 
   return (
     <div className={classes.mainDivStyle}>
-      {isLoading ? null : (
+      {isLoading ? (
+        <LoadingBackdrop />
+      ) : (
         <Grid
           container
           className={classes.mainGridContainerStyle}
