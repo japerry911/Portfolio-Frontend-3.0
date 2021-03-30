@@ -31,7 +31,7 @@ const ShowProject = () => {
     const fetchData = async () => {
       const projectResult = await expressServer.get(`/projects/${params.id}`);
 
-      await sleep(1500);
+      await sleep(1000);
 
       const tmpFeaturesArray = projectResult.data.features.map((feature) => ({
         text: feature,

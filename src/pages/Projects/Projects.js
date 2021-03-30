@@ -18,7 +18,7 @@ const Projects = () => {
     const fetchData = async () => {
       const projectsResults = await expressServer.get('/projects');
 
-      await sleep(1500);
+      await sleep(1000);
 
       setProjects(projectsResults.data);
       setIsLoading(false);

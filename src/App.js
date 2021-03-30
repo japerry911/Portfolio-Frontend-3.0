@@ -31,7 +31,7 @@ const App = () => {
 
     await Promise.all(promises);
 
-    await sleep(1500);
+    await sleep(1000);
 
     setIsLoading(false);
   };

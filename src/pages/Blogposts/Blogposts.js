@@ -18,7 +18,7 @@ const Blogposts = () => {
     const fetchData = async () => {
       const blogpostsResult = await expressServer.get('/blogposts');
 
-      await sleep(1500);
+      await sleep(1000);
 
       setBlogposts(blogpostsResult.data);
       setIsLoading(false);

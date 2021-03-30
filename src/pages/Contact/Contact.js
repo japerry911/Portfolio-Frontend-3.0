@@ -68,7 +68,7 @@ const Contact = () => {
       sendObject
     );
 
-    await sleep(1500);
+    await sleep(1000);
 
     if (response.status !== 200) {
       setToastMessage('Message send failure, try again');
