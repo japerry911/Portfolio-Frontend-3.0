@@ -14,7 +14,6 @@ const NavBar = ({ value, setValue }) => {
   return (
     <Fragment>
       <AppBar
-        position='static'
         position='absolute'
         color='transparent'
         className={classes.appBarStyle}

@@ -25,17 +25,19 @@ const Projects = () => {
 
   return (
     <div className={classes.mainDivStyle}>
-      <Grid
-        container
-        className={classes.mainGridContainerStyle}
-        justify='center'
-      >
-        {projects.map((projectObject, index) => (
-          <Fragment key={`${projectObject.title}-${index}`}>
-            <ProjectCard projectObject={projectObject} />
-          </Fragment>
-        ))}
-      </Grid>
+      {isLoading ? null : (
+        <Grid
+          container
+          className={classes.mainGridContainerStyle}
+          justify='center'
+        >
+          {projects.map((projectObject, index) => (
+            <Fragment key={`${projectObject.title}-${index}`}>
+              <ProjectCard projectObject={projectObject} />
+            </Fragment>
+          ))}
+        </Grid>
+      )}
     </div>
   );
 };

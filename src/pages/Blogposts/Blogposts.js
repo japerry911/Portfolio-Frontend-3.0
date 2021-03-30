@@ -25,17 +25,19 @@ const Blogposts = () => {
 
   return (
     <div className={classes.mainDivStyle}>
-      <Grid
-        container
-        className={classes.mainGridContainerStyle}
-        justify='center'
-      >
-        {blogposts.map((blogpostObject, index) => (
-          <Fragment key={`${blogpostObject.title}-${index}`}>
-            <BlogpostCard blogpostObject={blogpostObject} />
-          </Fragment>
-        ))}
-      </Grid>
+      {isLoading ? null : (
+        <Grid
+          container
+          className={classes.mainGridContainerStyle}
+          justify='center'
+        >
+          {blogposts.map((blogpostObject, index) => (
+            <Fragment key={`${blogpostObject.title}-${index}`}>
+              <BlogpostCard blogpostObject={blogpostObject} />
+            </Fragment>
+          ))}
+        </Grid>
+      )}
     </div>
   );
 };

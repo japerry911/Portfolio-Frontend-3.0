@@ -39,7 +39,7 @@ const ShowProject = () => {
     };
 
     fetchData();
-  }, []);
+  }, [params.id]);
 
   return (
     <div className={classes.mainDivStyle}>
@@ -64,7 +64,11 @@ const ShowProject = () => {
               </Typography>
             </Grid>
             <Grid item align='center'>
-              <img src={project.imgUrl} className={classes.imgStyle} />
+              <img
+                src={project.imgUrl}
+                className={classes.imgStyle}
+                alt={`${project.title} logo`}
+              />
             </Grid>
             <Grid item align='center'>
               <ChipArray chips={featuresArray} />

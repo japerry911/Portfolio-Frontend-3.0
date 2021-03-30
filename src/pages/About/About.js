@@ -38,7 +38,7 @@ const About = () => {
           </Grid>
           <Grid item>
             <img
-              alt='Jack and Skylord profile picture'
+              alt='Jack and Skylord profile'
               src='https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/jack_perry_2+(1).png'
               className={classes.profilePictureStyle}
             />
