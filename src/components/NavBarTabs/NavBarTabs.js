@@ -5,12 +5,12 @@ import { routesArray } from '../../router/RouteMisc';
 import { Link } from 'react-router-dom';
 import { useStyles } from './NavBarTabsStyles';
 
-const NavBarTabs = ({ value, handleTabChange }) => {
+const NavBarTabs = ({ value }) => {
   const classes = useStyles();
 
   return (
     <Fragment>
-      <Tabs value={value} onChange={handleTabChange}>
+      <Tabs value={value}>
         {routesArray.map((routeObject, index) => (
           <Tab
             key={`${routeObject.name}-${index}`}
