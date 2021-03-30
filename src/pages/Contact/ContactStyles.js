@@ -17,9 +17,12 @@ export const useStyles = makeStyles((theme) => ({
   mainPaperStyle: {
     padding: '3rem 0',
     margin: '10rem 0',
-    width: '65rem',
+    width: '70%',
     minHeight: '40rem',
     backgroundColor: 'rgba(93,112,146,.50)',
+    [theme.breakpoints.down('sm')]: {
+      width: '85%',
+    },
   },
   formStyle: {
     display: 'flex',
@@ -49,6 +52,12 @@ export const useStyles = makeStyles((theme) => ({
     },
     '& .MuiFilledInput-underline:hover:before': {
       borderBottom: `3px solid ${theme.palette.secondary.main}`,
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '50%',
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: '70%',
     },
   },
   titleStyle: {
