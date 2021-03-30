@@ -8,6 +8,7 @@ import useTheme from '@material-ui/core/styles/useTheme';
 import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import { useFormFields } from '../../hooks/customHooks';
+import ToastBar from '../../components/ToastBar/ToastBar';
 import { useStyles } from './ContactStyles';
 
 const INITIAL_STATE = {
@@ -28,13 +29,19 @@ const Contact = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [validationStatus, setValidationStatus] = useState(false);
   const [fields, setField, setFields] = useFormFields(INITIAL_STATE);
+  const [open, setOpen] = useState(false);
+  const [type, setType] = useState(null);
+  const [toastMessage, setToastMessage] = useState(null);
 
   useEffect(() => {
     if (fields.name && fields.email && fields.subject && fields.message) {
       if (emailRegexp.test(fields.email)) {
         setValidationStatus(true);
+        setOpen(false);
       } else {
-        // snackbar
+        setToastMessage('Invalid Email');
+        setType('error');
+        setOpen(true);
       }
     } else {
       setValidationStatus(false);
@@ -120,6 +127,12 @@ const Contact = () => {
           </Grid>
         </Grid>
       </Paper>
+      <ToastBar
+        open={open}
+        type={type}
+        setOpen={setOpen}
+        message={toastMessage}
+      />
     </div>
   );
 };
