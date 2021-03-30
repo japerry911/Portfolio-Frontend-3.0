@@ -14,7 +14,7 @@ export const useStyles = makeStyles((theme) => ({
   cardStyle: {
     margin: '3rem',
     height: '25rem',
-    width: '25%',
+    width: '35%',
     opacity: 0.75,
     transition: '350ms ease-in',
     '&:hover': {
