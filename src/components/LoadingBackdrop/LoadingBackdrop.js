@@ -3,8 +3,8 @@ import Backdrop from '@material-ui/core/Backdrop';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import { useStyles } from './LoadingBackdropStyles';
 
-const LoadingBackdrop = () => {
-  const classes = useStyles();
+const LoadingBackdrop = ({ backgroundColor }) => {
+  const classes = useStyles({ backgroundColor });
 
   return (
     <Fragment>
