@@ -29,7 +29,7 @@ const ExpCard = ({ imageUrl, expName, expDescription }) => {
               {expName}
             </Typography>
             <Typography
-              variant='h5'
+              variant='h6'
               component='p'
               className={classes.fontStyle}
             >

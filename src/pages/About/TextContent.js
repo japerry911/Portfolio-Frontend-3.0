@@ -143,7 +143,7 @@ export const skillSetArray = [
   {
     name: 'Google Cloud Platform',
     description:
-      'Utilized BigQuery, Cloud Storage, Compute Engine, Stackdrive Logging, and more during prior work experiences',
+      'Utilized BigQuery, Cloud Storage, Compute Engine, Stackdriver Logging, and more during prior work experiences',
     imageUrl:
       'https://s3.us-east-2.amazonaws.com/portfolio-bucket-3.0-29134u89324809184/about/gcp-logo-cloud.png',
   },
