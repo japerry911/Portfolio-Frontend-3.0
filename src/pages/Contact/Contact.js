@@ -9,6 +9,7 @@ import Button from '@material-ui/core/Button';
 import Icon from '@material-ui/core/Icon';
 import { useFormFields } from '../../hooks/customHooks';
 import ToastBar from '../../components/ToastBar/ToastBar';
+import expressServer from '../../api/expressServer';
 import { useStyles } from './ContactStyles';
 
 const INITIAL_STATE = {
@@ -48,6 +49,37 @@ const Contact = () => {
     }
   }, [fields]);
 
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const sendObject = {
+      name: fields.name,
+      email: fields.email,
+      subject: fields.subject,
+      message: fields.message,
+    };
+
+    setIsLoading(true);
+
+    const response = await expressServer.post(
+      '/contact/send-email',
+      sendObject
+    );
+
+    if (response.status !== 200) {
+      setToastMessage('Message send failure, try again');
+      setType('error');
+      setOpen(true);
+    } else {
+      setToastMessage('Message sent successfully');
+      setType('success');
+      setOpen(true);
+      setFields(INITIAL_STATE);
+    }
+
+    setIsLoading(false);
+  };
+
   return (
     <div className={classes.mainDivStyle}>
       <Paper className={classes.mainPaperStyle}>
@@ -75,7 +107,7 @@ const Contact = () => {
             }}
           />
           <Grid item style={{ width: '100%' }}>
-            <form className={classes.formStyle}>
+            <form className={classes.formStyle} onSubmit={handleSubmit}>
               <TextField
                 label='Name'
                 className={classes.textFieldStyle}
@@ -110,20 +142,20 @@ const Contact = () => {
                 id='message'
                 onChange={setField}
                 value={fields.message}
+                style={{ width: '55%' }}
               />
+              <Button
+                variant='contained'
+                color='secondary'
+                endIcon={<Icon>send</Icon>}
+                className={classes.buttonStyle}
+                size='large'
+                disabled={!validationStatus}
+                type='submit'
+              >
+                Send
+              </Button>
             </form>
-          </Grid>
-          <Grid item>
-            <Button
-              variant='contained'
-              color='secondary'
-              endIcon={<Icon>send</Icon>}
-              className={classes.buttonStyle}
-              size='large'
-              disabled={!validationStatus}
-            >
-              Send
-            </Button>
           </Grid>
         </Grid>
       </Paper>

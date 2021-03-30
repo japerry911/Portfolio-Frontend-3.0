@@ -29,7 +29,7 @@ export const useStyles = makeStyles((theme) => ({
     minHeight: '35rem',
   },
   textFieldStyle: {
-    width: '50%',
+    width: '30%',
     '& .MuiInput-underline:before': {
       borderBottom: `1px solid ${theme.palette.primary.main}`,
     },
