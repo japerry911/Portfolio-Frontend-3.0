@@ -13,6 +13,12 @@ export const useStyles = makeStyles((theme) => ({
     '&:hover': {
       opacity: 1,
     },
+    [theme.breakpoints.down('md')]: {
+      width: '65%',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '90%',
+    },
   },
   mainContentAreaStyle: {
     height: '100%',

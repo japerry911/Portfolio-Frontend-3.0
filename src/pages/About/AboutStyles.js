@@ -17,15 +17,33 @@ export const useStyles = makeStyles((theme) => ({
   aboutGridContainerStyle: {
     minHeight: '60rem',
     paddingTop: '10rem',
+    [theme.breakpoints.down('md')]: {
+      minHeight: '50rem',
+    },
   },
   profilePictureStyle: {
     height: 'auto',
-    width: '20rem',
+    width: '60%',
     paddingRight: '10rem',
     opacity: 0.75,
+    [theme.breakpoints.down('md')]: {
+      paddingRight: 0,
+      width: '95%',
+    },
   },
   h1Style: {
     fontFamily: theme.fonts.avenirBold,
     color: theme.palette.primary.main,
+  },
+  panelGridStyle: {
+    width: '40%',
+    padding: '3rem',
+    [theme.breakpoints.down('md')]: {
+      width: '90%',
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: '95%',
+      padding: '1rem',
+    },
   },
 }));
