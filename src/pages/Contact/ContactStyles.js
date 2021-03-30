@@ -30,10 +30,17 @@ export const useStyles = makeStyles((theme) => ({
   },
   textFieldStyle: {
     width: '50%',
-    '& .MuiOutlinedInput-root': {
-      '& fieldset': {
-        borderColor: 'red',
-      },
+    '& .MuiInput-underline:before': {
+      borderBottom: '2px solid grey',
+    },
+    '& .MuiFormLabel-root': {
+      color: theme.palette.primary.main,
+    },
+    '& .MuiInputBase-input': {
+      color: theme.palette.primary.main,
+    },
+    '& .MuiFilledInput-underline:before': {
+      borderBottom: '2px solid grey',
     },
   },
 }));

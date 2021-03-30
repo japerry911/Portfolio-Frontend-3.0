@@ -37,7 +37,8 @@ const Contact = () => {
               className={classes.textFieldStyle}
               required
               variant='filled'
-              color='primary'
+              multiline
+              rows={4}
             />
           </form>
         </Paper>
