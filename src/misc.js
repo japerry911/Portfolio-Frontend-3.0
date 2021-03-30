@@ -3,6 +3,10 @@ export const sleep = (milliseconds) => {
 };
 
 export const findIndex = (path, routesArray) => {
+  if (/projects\//.test(path)) {
+    return 3;
+  }
+
   const indexObject = routesArray.filter(
     (routeObject) => routeObject.link === path
   );
