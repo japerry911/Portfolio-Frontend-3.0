@@ -9,10 +9,13 @@ import YouTubeIcon from '@material-ui/icons/YouTube';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkIcon from '@material-ui/icons/Link';
 import IconButton from '@material-ui/core/IconButton';
+import Divider from '@material-ui/core/Divider';
+import useTheme from '@material-ui/core/styles/useTheme';
 import { useStyles } from './ShowProjectStyles';
 
 const ShowProject = () => {
   const classes = useStyles();
+  const theme = useTheme();
 
   const [isLoading, setIsLoading] = useState(true);
   const [project, setProject] = useState({});
@@ -67,6 +70,14 @@ const ShowProject = () => {
             <Grid item align='center'>
               <ChipArray chips={featuresArray} />
             </Grid>
+            <Divider
+              style={{
+                margin: '3rem 0',
+                height: '2px',
+                backgroundColor: theme.palette.primary.main,
+                width: '80%',
+              }}
+            />
             <Grid container item justify='space-evenly'>
               <Grid item>
                 <IconButton
