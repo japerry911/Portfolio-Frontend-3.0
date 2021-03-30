@@ -15,7 +15,7 @@ export const useStyles = makeStyles((theme) => ({
     alignItems: 'center',
   },
   mainPaperStyle: {
-    padding: '3rem 0',
+    padding: '2rem 0',
     margin: '10rem 0',
     width: '70%',
     minHeight: '40rem',

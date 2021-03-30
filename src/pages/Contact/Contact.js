@@ -13,6 +13,10 @@ import expressServer from '../../api/expressServer';
 import LoadingBackdrop from '../../components/LoadingBackdrop/LoadingBackdrop';
 import { sleep } from '../../misc';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
+import IconButton from '@material-ui/core/IconButton';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+import BookIcon from '@material-ui/icons/Book';
 import { useStyles } from './ContactStyles';
 
 const INITIAL_STATE = {
@@ -166,6 +170,43 @@ const Contact = () => {
                   Send
                 </Button>
               </form>
+            </Grid>
+            <Grid
+              item
+              container
+              justify='space-evenly'
+              style={{ paddingTop: '3rem' }}
+            >
+              <Grid item>
+                <IconButton
+                  component='a'
+                  href='https://www.linkedin.com/in/jack-e-perry/'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  <LinkedInIcon fontSize='large' color='primary' />
+                </IconButton>
+              </Grid>
+              <Grid item>
+                <IconButton
+                  component='a'
+                  href='https://github.com/japerry911'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  <GitHubIcon fontSize='large' color='primary' />
+                </IconButton>
+              </Grid>
+              <Grid item>
+                <IconButton
+                  component='a'
+                  href='https://jack72828383883.medium.com/'
+                  rel='noopener noreferrer'
+                  target='_blank'
+                >
+                  <BookIcon fontSize='large' color='primary' />
+                </IconButton>
+              </Grid>
             </Grid>
           </Grid>
         </Paper>
