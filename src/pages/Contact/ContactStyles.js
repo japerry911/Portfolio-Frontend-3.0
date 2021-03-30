@@ -31,16 +31,28 @@ export const useStyles = makeStyles((theme) => ({
   textFieldStyle: {
     width: '50%',
     '& .MuiInput-underline:before': {
-      borderBottom: '2px solid grey',
+      borderBottom: `1px solid ${theme.palette.primary.main}`,
     },
     '& .MuiFormLabel-root': {
       color: theme.palette.primary.main,
+      fontFamily: theme.fonts.avenirMedium,
     },
     '& .MuiInputBase-input': {
       color: theme.palette.primary.main,
+      fontFamily: theme.fonts.avenirMedium,
     },
     '& .MuiFilledInput-underline:before': {
-      borderBottom: '2px solid grey',
+      borderBottom: `1px solid ${theme.palette.primary.main}`,
     },
+    '& .MuiInput-underline:hover:before': {
+      borderBottom: `3px solid ${theme.palette.secondary.main}`,
+    },
+    '& .MuiFilledInput-underline:hover:before': {
+      borderBottom: `3px solid ${theme.palette.secondary.main}`,
+    },
+  },
+  titleStyle: {
+    color: theme.palette.primary.main,
+    fontFamily: theme.fonts.avenirBold,
   },
 }));
