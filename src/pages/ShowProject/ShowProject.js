@@ -21,26 +21,25 @@ const ShowProject = () => {
   const [project, setProject] = useState({});
   const [featuresArray, setFeaturesArray] = useState([]);
 
+  const params = useParams();
+
   useEffect(() => {
     setIsLoading(true);
 
     const fetchData = async () => {
       const projectResult = await expressServer.get(`/projects/${params.id}`);
-      console.log(projectResult);
+
       const tmpFeaturesArray = projectResult.data.features.map((feature) => ({
         text: feature,
       }));
 
       setFeaturesArray(tmpFeaturesArray);
-      console.log(featuresArray);
       setProject(projectResult.data);
       setIsLoading(false);
     };
 
     fetchData();
   }, []);
-
-  const params = useParams();
 
   return (
     <div className={classes.mainDivStyle}>
@@ -79,36 +78,42 @@ const ShowProject = () => {
               }}
             />
             <Grid container item justify='space-evenly'>
-              <Grid item>
-                <IconButton
-                  component='a'
-                  href={project.appLink}
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  <LinkIcon style={{ fontSize: '5rem' }} color='primary' />
-                </IconButton>
-              </Grid>
-              <Grid item>
-                <IconButton
-                  component='a'
-                  href={project.youtubeLink}
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  <YouTubeIcon style={{ fontSize: '5rem' }} color='primary' />
-                </IconButton>
-              </Grid>
-              <Grid item>
-                <IconButton
-                  component='a'
-                  href={project.githubLink}
-                  rel='noopener noreferrer'
-                  target='_blank'
-                >
-                  <GitHubIcon style={{ fontSize: '5rem' }} color='primary' />
-                </IconButton>
-              </Grid>
+              {project.appLink === undefined ? null : (
+                <Grid item>
+                  <IconButton
+                    component='a'
+                    href={project.appLink}
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    <LinkIcon style={{ fontSize: '5rem' }} color='primary' />
+                  </IconButton>
+                </Grid>
+              )}
+              {project.youtubeLink === undefined ? null : (
+                <Grid item>
+                  <IconButton
+                    component='a'
+                    href={project.youtubeLink}
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    <YouTubeIcon style={{ fontSize: '5rem' }} color='primary' />
+                  </IconButton>
+                </Grid>
+              )}
+              {project.githubLink === undefined ? null : (
+                <Grid item>
+                  <IconButton
+                    component='a'
+                    href={project.githubLink}
+                    rel='noopener noreferrer'
+                    target='_blank'
+                  >
+                    <GitHubIcon style={{ fontSize: '5rem' }} color='primary' />
+                  </IconButton>
+                </Grid>
+              )}
             </Grid>
           </Grid>
         </Paper>

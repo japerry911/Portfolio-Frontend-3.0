@@ -8,19 +8,16 @@ const ChipArray = ({ chips }) => {
 
   return (
     <Paper component='ul' className={classes.mainPaperStyle} elevation={0}>
-      {chips.map((chip, index) => {
-        console.log(chip);
-        return (
-          <li key={`${chip.text}-${index}`}>
-            <Chip
-              label={chip.text}
-              className={classes.chipStyle}
-              variant='default'
-              color='primary'
-            />
-          </li>
-        );
-      })}
+      {chips.map((chip, index) => (
+        <li key={`${chip.text}-${index}`}>
+          <Chip
+            label={chip.text}
+            className={classes.chipStyle}
+            variant='default'
+            color='primary'
+          />
+        </li>
+      ))}
     </Paper>
   );
 };
