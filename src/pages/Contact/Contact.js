@@ -5,6 +5,8 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import useTheme from '@material-ui/core/styles/useTheme';
+import Button from '@material-ui/core/Button';
+import Icon from '@material-ui/core/Icon';
 import { useStyles } from './ContactStyles';
 
 const Contact = () => {
@@ -31,7 +33,7 @@ const Contact = () => {
           </Grid>
           <Divider
             style={{
-              margin: '3rem 0',
+              margin: '1rem 0',
               height: '2px',
               backgroundColor: theme.palette.primary.main,
               width: '80%',
@@ -63,6 +65,17 @@ const Contact = () => {
                 rows={4}
               />
             </form>
+          </Grid>
+          <Grid item>
+            <Button
+              variant='contained'
+              color='secondary'
+              endIcon={<Icon>send</Icon>}
+              className={classes.buttonStyle}
+              size='large'
+            >
+              Send
+            </Button>
           </Grid>
         </Grid>
       </Paper>

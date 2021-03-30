@@ -24,7 +24,7 @@ export const useStyles = makeStyles((theme) => ({
   formStyle: {
     display: 'flex',
     flexDirection: 'column',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-around',
     alignItems: 'center',
     minHeight: '35rem',
   },
@@ -54,5 +54,8 @@ export const useStyles = makeStyles((theme) => ({
   titleStyle: {
     color: theme.palette.primary.main,
     fontFamily: theme.fonts.avenirBold,
+  },
+  buttonStyle: {
+    padding: '1rem 5rem',
   },
 }));
