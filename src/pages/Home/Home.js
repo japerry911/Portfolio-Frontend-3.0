@@ -25,8 +25,7 @@ const Home = () => {
               Perry<span className={classes.spanStyle}>.</span> <br /> I
               <span className={classes.spanStyle}>'</span>m a Full Stack
               Software Engineer
-              <span className={classes.spanStyle}>/</span>ETL Automation
-              Engineer
+              <span className={classes.spanStyle}>/</span>Data Engineer
             </Typography>
           </Paper>
         </Grid>
