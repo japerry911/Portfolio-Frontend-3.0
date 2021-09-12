@@ -23,9 +23,7 @@ const Home = () => {
             <Typography className={classes.introTextStyle} variant='h4'>
               Greetings<span className={classes.spanStyle}>,</span> I'm Jack
               Perry<span className={classes.spanStyle}>.</span> <br /> I
-              <span className={classes.spanStyle}>'</span>m a Full Stack
-              Software Engineer
-              <span className={classes.spanStyle}>/</span>Data Engineer
+              <span className={classes.spanStyle}>'</span>m a Senior Developer
             </Typography>
           </Paper>
         </Grid>
